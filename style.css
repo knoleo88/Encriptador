@@ -283,24 +283,18 @@ color: #0A3871;
 
 .prueba2{
     resize: none;
-    width: 400px;
-    height: 944px;
-/* White */
+    width: 397px;
+    height: 787px;
     background: #FFFFFF;
-/* shadow */
-    transition: 400ms;  
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
-
-font-weight: 400;
-font-size: 32px;
-line-height: 150%;
-/* identical to box height, or 48px */
-
-
-/* Dark blue/dark-blue-300 */
-
-color: #0A3871;
+    transition: 400ms;
+    /* box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); */
+    /* border-radius: 32px; */
+    border: none;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0A3871;
+    margin: 30px 0px 11px 8.5px;
 }
 
 .information{
