@@ -325,7 +325,7 @@ color: #495057;
 opacity: 0.8;
 }
 
-@media screen and (max-width:768px){
+@media screen and (max-width:1000px){
     .header{
         display: block;
         
@@ -398,7 +398,7 @@ opacity: 0.8;
 }
 }
 
-@media screen and (max-width:375px){
+@media screen and (max-width:767px){
     .header{
         display: block;
         
