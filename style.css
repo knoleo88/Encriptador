@@ -283,8 +283,8 @@ color: #0A3871;
 
 .prueba2{
     resize: none;
-    width: 397px;
-    height: 787px;
+    width: 394px;
+    height: 809px;
     background: #FFFFFF;
     transition: 400ms;
     /* box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); */
@@ -294,7 +294,7 @@ color: #0A3871;
     font-size: 32px;
     line-height: 150%;
     color: #0A3871;
-    margin: 30px 0px 11px 8.5px;
+    margin: 30px 0px 0px 0px;
 }
 
 .information{
