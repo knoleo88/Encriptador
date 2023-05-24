@@ -404,6 +404,13 @@ opacity: 0.8;
     width: 81%;
     margin-left: 159px;
 }
+.copyright{
+    width: auto;
+    /* text-align: center; */
+    /* display: flex; */
+    margin: 0px;
+    margin-left: 350px;
+}
 }
  
 @media screen and (max-width:390px){
@@ -481,6 +488,12 @@ opacity: 0.8;
     width: 90%;
     /* margin-left: 100px; */
     margin: 370px 10px 10px 15px;
+}
+.copyright{
+margin: 0px;
+    width: auto;
+    text-align: center;
+    display: flex;
 }
 }
 
