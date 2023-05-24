@@ -1,8 +1,8 @@
 body{
     
     position: relative;
-    width: 1440px;
-    height: 1024px;
+    /*width: 1440px;
+    height: 1024px;*/
     background: #F3F5FC;
 }
 
@@ -325,14 +325,18 @@ color: #495057;
 opacity: 0.8;
 }
 
-@media screen and (max-width:1000px){
+@media screen and (max-width:768px)
+{
+    body{
+        width: auto;
+    }
     .header{
         display: block;
         
     }
     .prueba{
         position: static;
-        width: 80%;
+        width: 90%;
         margin: 115px 100px 10px 100px;
         
     }
@@ -346,7 +350,8 @@ opacity: 0.8;
     }
     .encribotdecri{
         position: static;
-        margin-left: 100px;
+        margin-left: 149px;
+        margin-top: 10px;
         width: 100%;
     }
     .encrptar{
@@ -357,18 +362,16 @@ opacity: 0.8;
     }
     .divmunecorecblanco,.resultado{
         position: static;
-        width: 1154px;
-        
-        height: 133px;
-        margin: 10px 180px 10px 100px;
+        width: 90%;
+        height: 122px;
+        margin: 95px 0px 0px 15px;
         display: block;
         background: #FFFFFF;
-        /* shadow */
-            box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-            border-radius: 32px;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+        margin: 20px 0px 10px 115px;
     }
     .prueba2{
-        
         position: static;
         width: 100%;
         height: auto;
@@ -376,7 +379,7 @@ opacity: 0.8;
         background: #FFFFFF;
         box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
         border-radius: 32px;
-        margin: 0px 0px 0px 0px;
+        /* margin: 10px 10px 10px 15px; */
     }
     .Persona_Sentada{
         display:none;}
@@ -394,38 +397,41 @@ opacity: 0.8;
     margin-top: 370px;
     position: static;
     width: 81%;
-    margin-left: 100px;
+    margin-left: 159px;
 }
 }
+ 
+@media screen and (max-width:390px){
 
-@media screen and (max-width:767px){
     .header{
         display: block;
         
     }
+   body{
+        width: auto;
+    }
     .prueba{
         position: static;
-        width: 100%;
+        width: 90%;
         height: 624px;
         margin: 115px 10px 10px 15px;
-        
     }
     .information{
         position: static;
-        margin-left: 100px;
+        width: auto;
+        margin-left: 15px;
     }
     .information p{
         position: static;
+        width: auto;
         
     }
     .encribotdecri{
         position: static;
-        margin-left: 100px;
-        width: 90%;
+        margin: 10px 10px 10px 15px;
     }
     .encrptar{
         width: 90%;
-        margin-top: 10px;
     }
     .desencriptar{
         width: 90%;
@@ -433,18 +439,16 @@ opacity: 0.8;
     }
     .divmunecorecblanco,.resultado{
         position: static;
-        width: 1154px;
-        
-        height: 133px;
-        margin: 100px 180px 10px 100px;
+        width: 90%;
+        height: 122px;
+        margin: 95px 0px 0px 15px;
         display: block;
         background: #FFFFFF;
-        /* shadow */
-            box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-            border-radius: 32px;
+        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+        border-radius: 32px;
+        margin: 90px 10px 10px 15px;
     }
     .prueba2{
-        
         position: static;
         width: 100%;
         height: auto;
@@ -452,7 +456,7 @@ opacity: 0.8;
         background: #FFFFFF;
         box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
         border-radius: 32px;
-        margin: 0px 0px 0px 0px;
+        /* margin: 10px 10px 10px 15px; */
     }
     .Persona_Sentada{
         display:none;}
@@ -467,8 +471,11 @@ opacity: 0.8;
         text-align: center;
     }
 .Copy{
-    margin-top: 370px;
+    /* margin-top: 370px; */
     position: static;
-    width: 81%;
-    margin-left: 100px;
-}}
+    width: 90%;
+    /* margin-left: 100px; */
+    margin: 370px 10px 10px 15px;
+}
+}
+
