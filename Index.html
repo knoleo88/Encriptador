@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+
+        <meta charset='utf-8'>
+        <meta name="viewport" content="width=device-width">
+        <title>Reto Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        
+    </head>
+
+    <body>
+        
+        <header >
+                <img src="Desk1/Logoalura.png" alt="Logo Alura" >
+                
+        </header>        
+
+    <main>
+        <form>
+            <textarea id="textinput" class="prueba" name="valortextarea" onkeyup="this.value=Numeros(this.value)" rows="10" cols="50" placeholder="Ingrese el texto aqui"></textarea>
+            
+        </form>
+
+        <div class="information">
+            <img src="Desk1/bi_exclamation-circle-fill.jpg" alt="Signoadmiracion" class="admiration">
+            <p class="instruction">Solo letras minúsculas y sin acentos</p>
+        </div>
+
+        <section class="encribotdecri">
+            <button  class="encrptar">Encriptar</button>
+            <button  class="desencriptar">Desencriptar</button>
+           
+            
+        </section>
+
+        <div class="divmunecorecblanco">
+            <img src="Desk1/Muñeco.png" alt="PersonaSentada" class="Persona_Sentada">
+            <ul>
+                <h1 class="mensajenegritas">Ningún mensaje fue encontrado</h1>            
+                <h1 class="ingresatexto">Ingresa el texto que desees encriptar o desencriptar.</h1>
+            </ul>
+        </div>
+        <div class="resultado">
+            
+            <textarea id="textinput2" class="prueba2" name="valortextarea2" rows="10" cols="50"></textarea>
+        </div>
+    
+
+        
+            <button  class="Copy">Copiar</button>
+        
+
+
+    
+    </main>
+        <footer>
+
+        </footer>        
+    </body>
+</html>
+
+<script>
+    document.querySelector('.resultado').style.display = 'none';
+    document.querySelector('.Copy').style.display = 'none';
+    var mensajecuadro= document.querySelector('.prueba');
+    var bencri = document.querySelector(".encrptar");
+    var bdecr = document.querySelector(".desencriptar");
+    var copy = document.querySelector(".Copy");
+    //var input = document.querySelector("input");
+    mensajecuadro.focus();
+
+    bencri.onclick = borrar;
+    bdecr.onclick = borrar2;
+    copy.onclick=portapapeles;
+    function Numeros(string){//Solo numeros
+    var out = '';
+    var filtro = 'abcdefghijklmnñopqrstuvwxyz ';//Caracteres validos
+    //Recorrer el texto y verificar si el caracter se encuentra en la lista de validos 
+    for (var i=0; i<string.length; i++)
+       if (filtro.indexOf(string.charAt(i)) != -1)
+      {
+        out += string.charAt(i);
+      }else
+         {   //Se añaden a la salida los caracteres validos
+            alert("Solo minusculas y sin acentos")}
+	//alert("Solo minusculas")
+    //Retornar valor filtrado
+    return out;}
+function portapapeles(){
+    document.querySelector(".prueba2").disabled=false;
+    var codigoACopiar = document.querySelector('.prueba2');
+    codigoACopiar.select();
+    console.log(codigoACopiar);
+    codigoACopiar.setSelectionRange(0,99999);
+    document.execCommand('copy'); 
+    codigoACopiar.setSelectionRange(0,0);
+    document.querySelector(".prueba2").disabled=true;
+}
+function borrar() {
+    var resultado; 
+    var resultadod; 
+    
+    document.querySelector('.divmunecorecblanco').style.display = 'none';
+    document.querySelector('.Copy').style.display = 'block';
+    document.querySelector('.resultado').style.display = 'block';
+   
+    //document.querySelector(".prueba2").value="5 es el mensaje desencriptado";  
+    console.log(document.querySelector('.prueba').value)
+    if ((document.querySelector(".prueba").value)!=""){
+        resultado=document.querySelector(".prueba").value;
+    if ((document.querySelector(".prueba").value.includes('e'))==true){
+         resultado=document.querySelector(".prueba").value.replace(/e/ig, "enter");    
+        document.querySelector(".prueba").value=resultado;
+        console.log(resultado)
+    } 
+    
+    if ((document.querySelector(".prueba").value.includes('i'))==true){
+         resultado=document.querySelector(".prueba").value.replace(/i/ig, "imes");    
+        document.querySelector(".prueba").value=resultado;
+        console.log(resultado)
+    } 
+
+    if ((document.querySelector(".prueba").value.includes('a'))==true){
+         resultado=document.querySelector(".prueba").value.replace(/a/ig, "ai");    
+        document.querySelector(".prueba").value=resultado;
+        console.log(resultado)
+    } 
+
+    if ((document.querySelector(".prueba").value.includes('o'))==true){
+         resultado=document.querySelector(".prueba").value.replace(/o/ig, "ober");    
+        document.querySelector(".prueba").value=resultado;
+        console.log(resultado)
+    } 
+
+    if ((document.querySelector(".prueba").value.includes('u'))==true){
+        resultado=document.querySelector(".prueba").value.replace(/u/ig, "ufat");    
+        document.querySelector(".prueba").value=resultado;
+        console.log(resultado)}
+
+    }    if  ((document.querySelector(".prueba").value)==""){
+        alert("Sin texto en el encriptador");
+        document.querySelector('.Copy').style.display = 'none';
+        document.querySelector(".prueba2").disabled=true;
+        console.log(resultadod)
+    } else { 
+    document.querySelector(".prueba").value="";  
+    mensajecuadro.focus();
+    document.querySelector(".prueba2").value=resultado;
+    document.querySelector(".prueba2").disabled=true;
+}
+document.querySelector(".prueba").value="";  
+    //console.log(document.querySelector('.prueba').value)
+    }
+    function borrar2() {
+        var resultadod;    
+    document.querySelector('.divmunecorecblanco').style.display = 'none';
+    document.querySelector('.resultado').style.display = 'block';
+    //document.querySelector(".prueba2").value="5 es el mensaje desencriptado";  
+    console.log(document.querySelector('.prueba').value)
+    if ((document.querySelector(".prueba").value)==(document.querySelector(".prueba").value)){
+        var x=document.querySelector(".prueba").value
+        console.log("Valor guardado",x)
+    if ((document.querySelector(".prueba").value.includes('enter'))==true){
+         resultadod=document.querySelector(".prueba").value.replace(/enter/ig, "e");    
+        document.querySelector(".prueba").value=resultadod;
+        console.log(resultadod)
+    } 
+    
+    if ((document.querySelector(".prueba").value.includes('imes'))==true){
+         resultadod=document.querySelector(".prueba").value.replace(/imes/ig, "i");    
+        document.querySelector(".prueba").value=resultadod;
+        console.log(resultadod)
+    } 
+
+    if ((document.querySelector(".prueba").value.includes('ai'))==true){
+         resultadod=document.querySelector(".prueba").value.replace(/ai/ig, "a");    
+        document.querySelector(".prueba").value=resultadod;
+        console.log(resultadod)
+    } 
+
+    if ((document.querySelector(".prueba").value.includes('ober'))==true){
+         resultadod=document.querySelector(".prueba").value.replace(/ober/ig, "o");    
+        document.querySelector(".prueba").value=resultadod;
+        console.log(resultadod)
+    } 
+
+    if ((document.querySelector(".prueba").value.includes('ufat'))==true){
+        resultadod=document.querySelector(".prueba").value.replace(/ufat/ig, "u");    
+        document.querySelector(".prueba").value=resultadod;
+        console.log(resultadod)
+        
+    } } 
+    resultadod=document.querySelector(".prueba").value
+    console.log("Desenciptado",resultadod)
+    console.log("Valor del textarea",resultadod)
+    if  (x==resultadod){
+        document.querySelector(".prueba2").value="El mensaje no esta encriptado";
+        document.querySelector(".prueba2").disabled=true;
+        console.log(resultadod)
+    } else {
+    document.querySelector(".prueba").value="";  
+    mensajecuadro.focus();
+    document.querySelector(".prueba2").value=resultadod;
+    document.querySelector(".prueba2").disabled=true;
+}
+    }
+</script>
