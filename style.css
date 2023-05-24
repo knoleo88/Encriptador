@@ -324,7 +324,12 @@ color: #495057;
 
 opacity: 0.8;
 }
-
+.copyright{
+    text-align: center;
+    margin-top: 960px;
+    margin-left: 500px;
+    position: absolute;
+}
 @media screen and (max-width:768px)
 {
     body{
