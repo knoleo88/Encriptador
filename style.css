@@ -12,7 +12,7 @@
  }
  ::-webkit-scrollbar-thumb:hover{
     /* Cambio de color cuando pasamos sobre la barra el mouse */
-     background-color: darkred;
+     background-color: darkblue;
  }
  
  ::-webkit-scrollbar-thumb:active{
