@@ -1,499 +1,478 @@
-body{
-    
-    position: relative;
-    /*width: 1440px;
+body {
+  position: relative;
+  /*width: 1440px;
     height: 1024px;*/
-    background: #F3F5FC;
+  background: #f3f5fc;
 }
 
-header img{
-    /* Logo */
-    /* Auto layout */
+header img {
+  /* Logo */
+  /* Auto layout */
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 40px;
 
-    position: absolute;
-    width: 120px;
-    height: 48px;
-    left: 40px;
-    top: 40px;
+  position: absolute;
+  width: 120px;
+  height: 48px;
+  left: 40px;
+  top: 40px;
 }
-.resultado{
-    position: absolute;
-    width: 400px;
-    height: 944px;
-    left: 1000px;
-    top: 40px;
-/* White */
-    background: #FFFFFF;
-/* shadow */
+.resultado {
+  position: absolute;
+  width: 400px;
+  height: 944px;
+  left: 1000px;
+  top: 40px;
+  /* White */
+  background: #ffffff;
+  /* shadow */
+  box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+  border-radius: 32px;
+}
+.Copy {
+  /* Button */
+  position: absolute;
+  width: 336px;
+  height: 67px;
+  left: 1032px;
+  top: 885px;
+
+  /* Dark blue/dark-blue-300 */
+
+  border: 1px solid #0a3871;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 24px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  /* Dark blue/dark-blue-300 */
+
+  color: #0a3871;
+}
+.Copy:active {
+  background: #0a3871;
+  /* White */
+
+  color: #ffffff;
+  transform: scale(1.01);
+}
+.divmunecorecblanco {
+  position: absolute;
+  width: 400px;
+  height: 944px;
+  left: 1000px;
+  top: 40px;
+  /* White */
+  background: #f3f5fc;
+}
+.Persona_Sentada {
+  /* Muñeco */
+  position: absolute;
+  width: 336px;
+  height: 304px;
+  left: 32px;
+  top: 283px;
+}
+.divmunecorecblanco ul {
+  /* Frame 5 recuado para textos*/
+  /* Auto layout */
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  gap: 16px;
+
+  position: absolute;
+  width: 336px;
+  height: 122px;
+  left: 32px;
+  top: 619px;
+}
+.mensajenegritas {
+  /* Ningún mensaje fue encontrado */
+
+  width: 336px;
+  height: 58px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 120%;
+  /* or 29px */
+
+  text-align: center;
+
+  /* Gray/gray-500 */
+
+  color: #343a40;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.ingresatexto {
+  /* Ingresa el texto que desees encriptar o desencriptar. */
+
+  width: 336px;
+  height: 48px;
+
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  /* or 24px */
+
+  text-align: center;
+
+  /* Gray/gray-400 */
+
+  color: #495057;
+
+  /* Inside auto layout */
+
+  flex: none;
+  order: 1;
+  align-self: stretch;
+  flex-grow: 0;
+}
+.encribotdecri {
+  /* Auto layout */
+
+  padding: 0px;
+  gap: 24px;
+
+  position: absolute;
+  width: 680px;
+  height: 67px;
+  left: 240px;
+  top: 885px;
+}
+.encrptar {
+  /* Auto layout */
+  padding: 24px;
+  gap: 8px;
+
+  width: 328px;
+  height: 67px;
+
+  /* Dark blue/dark-blue-300 */
+
+  background: #0a3871;
+  border-radius: 24px;
+
+  /**/
+
+  text-align: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+
+  /* White */
+
+  color: #ffffff;
+}
+.encrptar:active {
+  background: #d8dfe8;
+  /* Dark blue/dark-blue-300 */
+
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+  /* Dark blue/dark-blue-300 */
+
+  color: #0a3871;
+  transform: scale(1.01);
+}
+.desencriptar {
+  padding: 24px;
+  gap: 8px;
+
+  width: 328px;
+  height: 67px;
+
+  /* Light gray */
+
+  background: #d8dfe8;
+  /* Dark blue/dark-blue-300 */
+
+  border: 1px solid #0a3871;
+  border-radius: 24px;
+
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+
+  /* Dark blue/dark-blue-300 */
+
+  color: #0a3871;
+}
+.desencriptar:active {
+  background: #0a3871;
+  /* White */
+
+  color: #ffffff;
+  transform: scale(1.01);
+}
+#ingretex {
+  position: absolute;
+  width: 577px;
+  height: 48px;
+  left: 240px;
+  top: 168px;
+
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  /* identical to box height, or 48px */
+
+  /* Dark blue/dark-blue-300 */
+
+  color: #0a3871;
+}
+.inputtext {
+  resize: none;
+
+  position: absolute;
+  width: 762px;
+  height: 631px;
+  left: 186px;
+  top: 168px;
+  box-shadow: 0px 0px 12px 8px #4a7d8c;
+  border-radius: 24px;
+  background: #f3f5fc;
+
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  /* identical to box height, or 48px */
+
+  /* Dark blue/dark-blue-300 */
+
+  color: #0a3871;
+}
+
+.inputtext2 {
+  resize: none;
+  width: 394px;
+  height: 809px;
+  background: #ffffff;
+  transition: 400ms;
+  /* box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); */
+  /* border-radius: 32px; */
+  border: none;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #0a3871;
+  margin: 30px 0px 0px 0px;
+}
+
+.information {
+  position: absolute;
+  width: 229px;
+  height: 18px;
+  left: 240px;
+  top: 851px;
+}
+.admiration {
+  width: 16px;
+  height: 16px;
+}
+.instruction {
+  display: inline;
+  position: absolute;
+  left: 24px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 150%;
+  /* identical to box height, or 18px */
+
+  /* Gray/gray-400 */
+
+  color: #495057;
+
+  opacity: 0.8;
+}
+.copyright {
+  text-align: center;
+  margin-top: 960px;
+  margin-left: 500px;
+  position: absolute;
+}
+@media screen and (max-width: 768px) {
+  body {
+    width: auto;
+  }
+  .header {
+    display: block;
+  }
+  .inputtext {
+    position: static;
+    width: 90%;
+    margin: 115px 100px 10px 100px;
+  }
+  .information {
+    position: static;
+    margin-left: 100px;
+  }
+  .information p {
+    position: static;
+  }
+  .encribotdecri {
+    position: static;
+    margin-left: 149px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  .encrptar {
+    width: 40%;
+  }
+  .desencriptar {
+    width: 40%;
+  }
+  .divmunecorecblanco,
+  .resultado {
+    position: static;
+    width: 90%;
+    height: 122px;
+    margin: 95px 0px 0px 15px;
+    display: block;
+    background: #ffffff;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
     border-radius: 32px;
+    margin: 20px 0px 10px 115px;
+  }
+  .inputtext2 {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #ffffff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    /* margin: 10px 10px 10px 15px; */
+  }
+  .Persona_Sentada {
+    display: none;
+  }
 
-}
-.Copy{
-    /* Button */
-position: absolute;
-width: 336px;
-height: 67px;
-left: 1032px;
-top: 885px;
-
-/* Dark blue/dark-blue-300 */
-
-border: 1px solid #0A3871;
-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-border-radius: 24px;
-
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-text-align: center;
-
-/* Dark blue/dark-blue-300 */
-
-color: #0A3871;
-}
-.Copy:active{
-    background: #0A3871;
-    /* White */
-
-color: #FFFFFF;
-    transform: scale(1.01);
-    }
-.divmunecorecblanco{
-    position: absolute;
-    width: 400px;
-    height: 944px;
-    left: 1000px;
-    top: 40px;
-/* White */
-    background: #F3F5FC;
-
-}
-.Persona_Sentada{
-    /* Muñeco */
-position: absolute;
-width: 336px;
-height: 304px;
-left: 32px;
-top: 283px;
-}
-.divmunecorecblanco ul{/* Frame 5 recuado para textos*/
-    /* Auto layout */
-    
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 16px;
-    
-    position: absolute;
-    width: 336px;
-    height: 122px;
-    left: 32px;
-    top: 619px;
-    
-}
-.mensajenegritas{
-    /* Ningún mensaje fue encontrado */
-
-
-width: 336px;
-height: 58px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 700;
-font-size: 24px;
-line-height: 120%;
-/* or 29px */
-
-text-align: center;
-
-/* Gray/gray-500 */
-
-color: #343A40;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-align-self: stretch;
-flex-grow: 0;
-}
-.ingresatexto{
-    /* Ingresa el texto que desees encriptar o desencriptar. */
-
-
-width: 336px;
-height: 48px;
-
-font-family: 'Inter';
-font-style: normal;
-font-weight: 400;
-font-size: 16px;
-line-height: 150%;
-/* or 24px */
-
-text-align: center;
-
-/* Gray/gray-400 */
-
-color: #495057;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 1;
-align-self: stretch;
-flex-grow: 0;
-}
-.encribotdecri{
-/* Auto layout */
-
-
-padding: 0px;
-gap: 24px;
-
-position: absolute;
-width: 680px;
-height: 67px;
-left: 240px;
-top: 885px;
-
-}
-.encrptar{
-/* Auto layout */
-padding: 24px;
-gap: 8px;
-
-width: 328px;
-height: 67px;
-
-/* Dark blue/dark-blue-300 */
-
-background: #0A3871;
-border-radius: 24px;
-
-/**/
-
-text-align: center;
-font-weight: 400;
-font-size: 16px;
-line-height: 19px;
-
-
-/* White */
-
-color: #FFFFFF;
-
-}
-.encrptar:active{
-    background: #D8DFE8;
-/* Dark blue/dark-blue-300 */
-
-border: 1px solid #0A3871;
-border-radius: 24px;
-    /* Dark blue/dark-blue-300 */
-    
-    color: #0A3871;
-    transform: scale(1.01);
-    }
-.desencriptar{
-    padding: 24px;
-gap: 8px;
-
-width: 328px;
-height: 67px;
-
-/* Light gray */
-
-background: #D8DFE8;
-/* Dark blue/dark-blue-300 */
-
-border: 1px solid #0A3871;
-border-radius: 24px;
-   
- 
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+  .divmunecorecblanco ul {
+    position: static;
+    display: block;
+    width: auto;
+  }
+  .mensajenegritas,
+  .ingresatexto {
+    width: auto;
     text-align: center;
-    
-    /* Dark blue/dark-blue-300 */
-    
-    color: #0A3871;
-    
-
-}
-.desencriptar:active{
-    background: #0A3871;
-    /* White */
-
-color: #FFFFFF;
-    transform: scale(1.01);
-    }
-#ingretex{
-    position: absolute;
-    width: 577px;
-    height: 48px;
-    left: 240px;
-    top: 168px;
-    
-
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    /* identical to box height, or 48px */
-    
-    
-    /* Dark blue/dark-blue-300 */
-    
-    color: #0A3871;
-}
-.prueba{
-    resize: none;
-   
-    position: absolute;
-width: 762px;
-height: 631px;
-left: 186px;
-top: 168px;
-box-shadow: 0px 0px 12px 8px #4A7D8C;
-border-radius: 24px;
-background: #F3F5FC;
-
-font-weight: 400;
-font-size: 32px;
-line-height: 150%;
-/* identical to box height, or 48px */
-
-
-/* Dark blue/dark-blue-300 */
-
-color: #0A3871;
-}
-
-.prueba2{
-    resize: none;
-    width: 394px;
-    height: 809px;
-    background: #FFFFFF;
-    transition: 400ms;
-    /* box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08); */
-    /* border-radius: 32px; */
-    border: none;
-    font-weight: 400;
-    font-size: 32px;
-    line-height: 150%;
-    color: #0A3871;
-    margin: 30px 0px 0px 0px;
-}
-
-.information{
-    position: absolute;
-width: 229px;
-height: 18px;
-left: 240px;
-top: 851px;
-}
-.admiration{
-    width: 16px;
-height: 16px;
-}
-.instruction{
-    display:inline;
-position: absolute;
-left: 24px;
-    font-weight: 400;
-font-size: 12px;
-line-height: 150%;
-/* identical to box height, or 18px */
-
-
-/* Gray/gray-400 */
-
-color: #495057;
-
-opacity: 0.8;
-}
-.copyright{
-    text-align: center;
-    margin-top: 960px;
-    margin-left: 500px;
-    position: absolute;
-}
-@media screen and (max-width:768px)
-{
-    body{
-        width: auto;
-    }
-    .header{
-        display: block;
-        
-    }
-    .prueba{
-        position: static;
-        width: 90%;
-        margin: 115px 100px 10px 100px;
-        
-    }
-    .information{
-        position: static;
-        margin-left: 100px;
-    }
-    .information p{
-        position: static;
-        
-    }
-    .encribotdecri{
-        position: static;
-        margin-left: 149px;
-        margin-top: 10px;
-        width: 100%;
-    }
-    .encrptar{
-        width: 40%;
-    }
-    .desencriptar{
-        width: 40%;
-    }
-    .divmunecorecblanco,.resultado{
-        position: static;
-        width: 90%;
-        height: 122px;
-        margin: 95px 0px 0px 15px;
-        display: block;
-        background: #FFFFFF;
-        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-        border-radius: 32px;
-        margin: 20px 0px 10px 115px;
-    }
-    .prueba2{
-        position: static;
-        width: 100%;
-        height: auto;
-        display: block;
-        background: #FFFFFF;
-        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-        border-radius: 32px;
-        /* margin: 10px 10px 10px 15px; */
-    }
-    .Persona_Sentada{
-        display:none;}
-    
-    .divmunecorecblanco ul {
-        position: static;
-        display: block;
-        width: auto;
-    }
-    .mensajenegritas,.ingresatexto{
-        width: auto;
-        text-align: center;
-    }
-.Copy{
+  }
+  .Copy {
     margin-top: 370px;
     position: static;
     width: 81%;
     margin-left: 159px;
-}
-.copyright{
+  }
+  .copyright {
     width: auto;
     /* text-align: center; */
     /* display: flex; */
     margin: 0px;
     margin-left: 350px;
+  }
 }
-}
- 
-@media screen and (max-width:390px){
 
-    .header{
-        display: block;
-        
-    }
-   body{
-        width: auto;
-    }
-    .prueba{
-        position: static;
-        width: 90%;
-        height: 624px;
-        margin: 115px 10px 10px 15px;
-    }
-    .information{
-        position: static;
-        width: auto;
-        margin-left: 15px;
-    }
-    .information p{
-        position: static;
-        width: auto;
-        
-    }
-    .encribotdecri{
-        position: static;
-        margin: 10px 10px 10px 15px;
-    }
-    .encrptar{
-        width: 90%;
-    }
-    .desencriptar{
-        width: 90%;
-        margin-top: 10px;
-    }
-    .divmunecorecblanco,.resultado{
-        position: static;
-        width: 90%;
-        height: 122px;
-        margin: 95px 0px 0px 15px;
-        display: block;
-        background: #FFFFFF;
-        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-        border-radius: 32px;
-        margin: 90px 10px 10px 15px;
-    }
-    .prueba2{
-        position: static;
-        width: 100%;
-        height: auto;
-        display: block;
-        background: #FFFFFF;
-        box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-        border-radius: 32px;
-        /* margin: 10px 10px 10px 15px; */
-    }
-    .Persona_Sentada{
-        display:none;}
-    
-    .divmunecorecblanco ul {
-        position: static;
-        display: block;
-        width: auto;
-    }
-    .mensajenegritas,.ingresatexto{
-        width: auto;
-        text-align: center;
-    }
-.Copy{
+@media screen and (max-width: 390px) {
+  .header {
+    display: block;
+  }
+  body {
+    width: auto;
+  }
+  .inputtext {
+    position: static;
+    width: 90%;
+    height: 624px;
+    margin: 115px 10px 10px 15px;
+  }
+  .information {
+    position: static;
+    width: auto;
+    margin-left: 15px;
+  }
+  .information p {
+    position: static;
+    width: auto;
+  }
+  .encribotdecri {
+    position: static;
+    margin: 10px 10px 10px 15px;
+  }
+  .encrptar {
+    width: 90%;
+  }
+  .desencriptar {
+    width: 90%;
+    margin-top: 10px;
+  }
+  .divmunecorecblanco,
+  .resultado {
+    position: static;
+    width: 90%;
+    height: 122px;
+    margin: 95px 0px 0px 15px;
+    display: block;
+    background: #ffffff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    margin: 90px 10px 10px 15px;
+  }
+  .inputtext2 {
+    position: static;
+    width: 100%;
+    height: auto;
+    display: block;
+    background: #ffffff;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
+    border-radius: 32px;
+    /* margin: 10px 10px 10px 15px; */
+  }
+  .Persona_Sentada {
+    display: none;
+  }
+
+  .divmunecorecblanco ul {
+    position: static;
+    display: block;
+    width: auto;
+  }
+  .mensajenegritas,
+  .ingresatexto {
+    width: auto;
+    text-align: center;
+  }
+  .Copy {
     /* margin-top: 370px; */
     position: static;
     width: 90%;
     /* margin-left: 100px; */
     margin: 370px 10px 10px 15px;
-}
-.copyright{
-margin: 0px;
+  }
+  .copyright {
+    margin: 0px;
     width: auto;
     text-align: center;
-    display: flex;
+  }
 }
-}
-
