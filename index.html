@@ -2,186 +2,240 @@
 
 <html lang="es">
 
-    <head>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Encriptador Reto Alura</title>
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
 
-        <meta charset='utf-8'>
-        <meta name="viewport" content="width=device-width">
-        <title>Encriptador Reto Alura</title>
-        <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="style.css">
-    </head>
+<body>
+    <header>
+        <img src="Desk1/Logoalura.png" alt="Logo Alura" />
+        <!-- Logo de alura -->
+    </header>
 
-    <body>
+    <main>
+        <form>
+            <!-- Caja de texto a ingresar -->
+            <textarea id="textinput" class="inputtext" name="valortextarea" onkeyup="this.value=validacion(this.value)"
+                rows="10" cols="50" placeholder="Ingrese el texto aqui"></textarea>
+            <!--texarea de texto-->
+        </form>
 
-        <header >
-            <img src="Desk1/Logoalura.png" alt="Logo Alura" > <!-- Logo de alura -->
-        </header>        
+        <div class="information">
+            <!-- Div donde se almacenan icono de exclamasion y mensaje de instrucciones -->
+            <img src="Desk1/bi_exclamation-circle-fill.jpg" alt="Signoadmiracion" class="admiration" />
+            <!-- Imagen de exclamasion -->
+            <p>Solo letras minúsculas y sin acentos</p>
+            <!-- Instrucciones-->
+        </div>
 
-        <main> 
+        <section class="encribotdecri">
+            <!-- Div para botones encriptar y desencriptar-->
+            <button class="encrptar">Encriptar</button>
+            <button class="desencriptar">Desencriptar</button>
+        </section>
 
-            <form> <!-- Caja de texto a ingresar -->
-                <textarea id="textinput" class="inputtext" name="valortextarea" onkeyup="this.value=validacion(this.value)" rows="10" cols="50" placeholder="Ingrese el texto aqui"></textarea> <!--texarea de texto-->
-            </form>
+        <div class="divmunecorecblanco">
+            <!--Div del recuadro de imagen e instruicciones para encriptador-->
+            <img src="Desk1/Muñeco.png" alt="PersonaSentada" class="Persona_Sentada" />
+            <ul>
+                <h1 class="mensajenegritas">Ningún mensaje fue encontrado</h1>
+                <h1 class="ingresatexto">
+                    Ingresa el texto que desees encriptar o desencriptar.
+                </h1>
+            </ul>
+        </div>
 
-            <div class="information"> <!-- Div donde se almacenan icono de exclamasion y mensaje de instrucciones -->
-                <img src="Desk1/bi_exclamation-circle-fill.jpg" alt="Signoadmiracion" class="admiration"> <!-- Imagen de exclamasion -->
-                <p class="instruction">Solo letras minúsculas y sin acentos</p> <!-- Instrucciones-->
-            </div>
+        <div class="resultado">
+            <!-- Div para el resultado de la encriptacion o desencriptacion-->
+            <textarea id="textinput2" class="inputtext2" name="valortextarea2" rows="10" cols="50"></textarea>
+            <!--Tex area de resultado -->
+        </div>
 
-            <section class="encribotdecri"><!-- Div para botones encriptar y desencriptar-->
-                <button  class="encrptar">Encriptar</button>
-                <button  class="desencriptar">Desencriptar</button>
-            </section>
-
-            <div class="divmunecorecblanco"> <!--Div del recuadro de imagen e instruicciones para encriptador-->
-                <img src="Desk1/Muñeco.png" alt="PersonaSentada" class="Persona_Sentada">
-                    <ul>
-                        <h1 class="mensajenegritas">Ningún mensaje fue encontrado</h1>            
-                        <h1 class="ingresatexto">Ingresa el texto que desees encriptar o desencriptar.</h1>
-                    </ul>
-            </div>
-            
-            <div class="resultado"><!-- Div para el resultado de la encriptacion o desencriptacion-->
-                <textarea id="textinput2" class="inputtext2" name="valortextarea2" rows="10" cols="50"></textarea> <!--Tex area de resultado -->
-            </div>
-           
-                <button  class="Copy">Copiar</button> <!-- Botton de copiar-->
-            
-        </main>
-        <footer>
-            <div class="copyright">
-                <p class="txtCopyright">© Encriptador - 2023</p>
-                <p class="txtCopyright">Leonardo Daniel Cano Lopez</p>
-            </div>
-        </footer>
-        
-    </body>
+        <button class="Copy">Copiar</button>
+        <!-- Botton de copiar-->
+    </main>
+    <footer>
+        <div class="copyright">
+            <p class="txtCopyright">© Encriptador - 2023</p>
+            <p class="txtCopyright">Leonardo Daniel Cano Lopez</p>
+        </div>
+    </footer>
+</body>
 
 </html>
 
 <script>
-    document.querySelector('.resultado').style.display = 'none'; //Se utiliza para ocultar el textarea de resultado
+    
+    document.querySelector(".resultado").style.display = "none"; //Se utiliza para ocultar el textarea de resultado
     document.querySelector('.Copy').style.display = 'none'; //Se utiliza para ocultar el boton de copiar
     
+
     //Declaracion de variables
-    var mensajecuadro= document.querySelector('.inputtext'); 
+    var mensajecuadro = document.querySelector(".inputtext");
     var bencri = document.querySelector(".encrptar");
     var bdecr = document.querySelector(".desencriptar");
     var copy = document.querySelector(".Copy");
-        mensajecuadro.focus(); //Para poner el cursos en textarea del encriptador
-        bencri.onclick = encrypt;  //Comando para cuando se pulse el boton de encriptado
-        bdecr.onclick = decrypt;   //Comando para cuando se pulse el boton de desencriptado
-        copy.onclick=portapapeles; //Comando para cuando se pulse el boton de Copiar
+    mensajecuadro.focus(); //Para poner el cursos en textarea del encriptador
+    bencri.onclick = encrypt; //Comando para cuando se pulse el boton de encriptado
+    bdecr.onclick = decrypt; //Comando para cuando se pulse el boton de desencriptado
+    copy.onclick = portapapeles; //Comando para cuando se pulse el boton de Copiar
 
-        function validacion(string){//Funcion que se encarda de validar que solo se pongan minusculas
-            var out = '';
-            var filtro = 'abcdefghijklmnñopqrstuvwxyz ';//Caracteres validos
-    //Recorrer el texto y verificar si el caracter se encuentra en la lista de validos 
-                for (var i=0; i<string.length; i++)
-                if (filtro.indexOf(string.charAt(i)) != -1){
-                    out += string.charAt(i);//Se agrega a la variable out el recorrido de la cadena(el signo += es igual a poner out=out+1)
-                    }else { 
-                    alert("Solo minusculas y sin acentos");}
-                    //Alerta de Solo minusculas    
-                    return out;//Retornar valor filtrado 
+    function validacion(string) {
+        //Funcion que se encarda de validar que solo se pongan minusculas
+        var out = "";
+        var filtro = "abcdefghijklmnñopqrstuvwxyz "; //Caracteres validos
+        //Recorrer el texto y verificar si el caracter se encuentra en la lista de validos
+        for (var i = 0; i < string.length; i++)
+            if (filtro.indexOf(string.charAt(i)) != -1) {
+                out += string.charAt(i); //Se agrega a la variable out el recorrido de la cadena(el signo += es igual a poner out=out+1)
+            } else {
+                alert("Solo minusculas y sin acentos");
             }
-        
-        function portapapeles(){// Funcion que se encargara de realizar el copiado al portapapales
-            document.querySelector(".inputtext2").disabled=false; // Linea para habilitar el textarea del resultado para poder seleccionarla
-            var codigoACopiar = document.querySelector('.inputtext2'); //se crea variable para indicar que se va a seleccionar
-            codigoACopiar.select();//Nos colocamos en la variable
-            codigoACopiar.setSelectionRange(0,99999);// Seleccionamos dentro de textarea todo el rango posible
-            document.execCommand('copy'); //Ocuamos el comando para copiar
-            codigoACopiar.setSelectionRange(0,0);// Linea para deseleccionar el texto
-            document.querySelector(".inputtext2").disabled=true;//Linea para desabilitar el textarea que se pueda seleccionar
-        }
+        //Alerta de Solo minusculas
+        return out; //Retornar valor filtrado
+    }
 
-        function encrypt() {//Funcion para encriptar
-            //Cracion de variables para guardar los resultados de encriptacion
-            var resultado; 
-            var resultadod; 
+    function portapapeles() {
+        // Funcion que se encargara de realizar el copiado al portapapales
+        document.querySelector(".inputtext2").disabled = false; // Linea para habilitar el textarea del resultado para poder seleccionarla
+        var codigoACopiar = document.querySelector(".inputtext2"); //se crea variable para indicar que se va a seleccionar
+        codigoACopiar.select(); //Nos colocamos en la variable
+        codigoACopiar.setSelectionRange(0, 99999); // Seleccionamos dentro de textarea todo el rango posible
+        document.execCommand("copy"); //Ocupamos el comando para copiar
+        codigoACopiar.setSelectionRange(0, 0); // Linea para deseleccionar el texto
+        document.querySelector(".inputtext2").disabled = true; //Linea para desabilitar el textarea que se pueda seleccionar
+    }
+
+    function encrypt() {
+        //Funcion para encriptar
+        //Cracion de variables para guardar los resultados de encriptacion
+        var resultado;
+        var resultadod;
+
+        document.querySelector(".divmunecorecblanco").style.display = "none"; // Oculatmos el div donde esta el muñeco y las intrucciones
+        document.querySelector('.Copy').style.display = 'block'; // Mostramos el boton de copiar
+        document.querySelector(".resultado").style.display = "block"; // Mostramos el textarea con el resultado de encriptacion
+
+        if (document.querySelector(".inputtext").value != "") {
+            //If que comprueba si textx area es diferente de vacio y existe texto en el area para encriptar
+            resultado = document.querySelector(".inputtext").value; //En caso de que no alla letras para encriptar guardamos el resultado para mostralo tal cual se escribio
+
+            if (document.querySelector(".inputtext").value.includes("e") == true) {
+                //Esta linea compara si el texto ingresado tiene una e en este caso la sentencia devuelve true o false
+                resultado = document
+                    .querySelector(".inputtext")
+                    .value.replace(/e/gi, "enter"); //Sacamos el valor de textarea y remplacamos con codigo remplace se guarda en var resultado
+                document.querySelector(".inputtext").value = resultado; //le damos el valor de lo remplazado a la variable resultado para proseguir con las siguientes letras
+            }
+
+            if (document.querySelector(".inputtext").value.includes("i") == true) {
+                //Mismas sentencias pero para letra i
+                resultado = document
+                    .querySelector(".inputtext")
+                    .value.replace(/i/gi, "imes");
+                document.querySelector(".inputtext").value = resultado;
+            }
+
+            if (document.querySelector(".inputtext").value.includes("a") == true) {
+                //Mismas sentencias pero para letra a
+                resultado = document
+                    .querySelector(".inputtext")
+                    .value.replace(/a/gi, "ai");
+                document.querySelector(".inputtext").value = resultado;
+            }
+            if (document.querySelector(".inputtext").value.includes("o") == true) {
+                //Mismas sentencias pero para letra o
+                resultado = document
+                    .querySelector(".inputtext")
+                    .value.replace(/o/gi, "ober");
+                document.querySelector(".inputtext").value = resultado;
+            }
+
+            if (document.querySelector(".inputtext").value.includes("u") == true) {
+                //Mismas sentencias pero para letra u
+                resultado = document
+                    .querySelector(".inputtext")
+                    .value.replace(/u/gi, "ufat");
+                document.querySelector(".inputtext").value = resultado;
+            }
+        }
+            if (document.querySelector(".inputtext").value == "") {
+                //En esta linea se evalua si el texarea esta vacio no se manda alerta
+                alert("Sin texto en el encriptador");
+                document.querySelector('.Copy').style.display = 'none'; //Se utiliza para ocultar el boton de copiar
+                document.querySelector(".inputtext2").disabled = true; // Desabilitamos el textarea del resultado
+            } else {
+                //Este else nos indica que si no es vacio va imprimir el resultado de los if anteriores
+                document.querySelector(".inputtext").value = ""; //Borramos cualquier caracter del texarea
+                mensajecuadro.focus(); //Ponemos el cursos en el textarea
+                document.querySelector(".inputtext2").value = resultado; //le damos el valor al textarea de resultado
+                document.querySelector(".inputtext2").disabled = true; //Desabilitamos el cursos del rtexarea de resultado
+            }
+            document.querySelector(".inputtext").value = ""; //Limpiamos el textarea depues de cualquiera de las sentencias realizadas
+    }
     
-            document.querySelector('.divmunecorecblanco').style.display = 'none'; // Oculatmos el div donde esta el muñeco y las intrucciones
-            document.querySelector('.Copy').style.display = 'block'; // Mostramos el boton de copiar
-            document.querySelector('.resultado').style.display = 'block'; // Mostramos el textarea con el resultado de encriptacion
-   
+    function decrypt() {
+        //Funcion encargada de desencriptar
+        var resultadod; //declaracion de variables
+        var x = document.querySelector(".inputtext").value; // le damos el valor del inputtex area a la variable x para guardar su valor original
+        document.querySelector(".divmunecorecblanco").style.display = "none"; // Oculamos el div que tiene instrucciones eh imagen
+        document.querySelector(".resultado").style.display = "block"; // Mostramos el texarea de resultado
+        document.querySelector('.Copy').style.display = 'block'; // Mostramos el boton de copiar
 
-            if ((document.querySelector(".inputtext").value)!=""){ //If que comprueba si textx area es diferente de vacio y existe texto en el area para encriptar
-                    resultado=document.querySelector(".inputtext").value; //En caso de que no alla letras para encriptar guardamos el resultado para mostralo tal cual se escribio 
-                    
-                if ((document.querySelector(".inputtext").value.includes('e'))==true){ //Esta linea compara si el texto ingresado tiene una e en este caso la sentencia devuelve true o false
-                        resultado=document.querySelector(".inputtext").value.replace(/e/ig, "enter"); //Sacamos el valor de textarea y remplacamos con codigo remplace se guarda en var resultado   
-                        document.querySelector(".inputtext").value=resultado;//le damos el valor de lo remplazado a la variable resultado para proseguir con las siguientes letras
-                    } 
-
-                if ((document.querySelector(".inputtext").value.includes('i'))==true){//Mismas sentencias pero para letra i
-                        resultado=document.querySelector(".inputtext").value.replace(/i/ig, "imes");    
-                        document.querySelector(".inputtext").value=resultado;
-                    } 
-
-                if ((document.querySelector(".inputtext").value.includes('a'))==true){//Mismas sentencias pero para letra a
-                        resultado=document.querySelector(".inputtext").value.replace(/a/ig, "ai");
-                        document.querySelector(".inputtext").value=resultado;
-                    } 
-                if ((document.querySelector(".inputtext").value.includes('o'))==true){//Mismas sentencias pero para letra o
-                        resultado=document.querySelector(".inputtext").value.replace(/o/ig, "ober");    
-                        document.querySelector(".inputtext").value=resultado;
-                    } 
-                
-                if ((document.querySelector(".inputtext").value.includes('u'))==true){//Mismas sentencias pero para letra u
-                        resultado=document.querySelector(".inputtext").value.replace(/u/ig, "ufat");    
-                        document.querySelector(".inputtext").value=resultado;
-                    }
-                if  ((document.querySelector(".inputtext").value)==""){//En esta linea se evalua si el texarea esta vacio no se manda alerta
-                        alert("Sin texto en el encriptador");
-                        document.querySelector('.Copy').style.display = 'none';// Desabilitamos el boton de copiar
-                        document.querySelector(".inputtext2").disabled=true;// Desabilitamos el textarea del resultado 
-                    } else { //Este else nos indica que si no es vacio va imprimir el resultado de los if anteriores
-                            document.querySelector(".inputtext").value="";  //Borramos cualquier caracter del texarea
-                            mensajecuadro.focus();//Ponemos el cursos en el textarea
-                            document.querySelector(".inputtext2").value=resultado;//le damos el valor al textarea de resultado
-                            document.querySelector(".inputtext2").disabled=true;//Desabilitamos el cursos del rtexarea de resultado
-                        }
-                document.querySelector(".inputtext").value="";  //Limpiamos el textarea depues de cualquiera de las sentencias realizadas
-            }
+        if (document.querySelector(".inputtext").value.includes("imes") == true) {
+            //Mismo metodo que la encriptacion comparamos la cadena si cuenta con la informacion tenemos true sino hay un falce
+            resultadod = document
+                .querySelector(".inputtext")
+                .value.replace(/imes/gi, "i"); // En caso de que sea true se remplaza con el codigo remplace
+            document.querySelector(".inputtext").value = resultadod; //Se asigna valor despues de la desencriptacion para seguir con las siguientes condiciones
         }
-        function decrypt() {//Funcion encargada de desencriptar
-            var resultadod;    //declaracion de variables
-            var x=document.querySelector(".inputtext").value // le damos el valor del inputtex area a la variable x para guardar su valor original
-            document.querySelector('.divmunecorecblanco').style.display = 'none'; // Oculamos el div que tiene instrucciones eh imagen
-            document.querySelector('.resultado').style.display = 'block'; // Mostramos el texarea de resultado
-                                       
-                if ((document.querySelector(".inputtext").value.includes('imes'))==true){ //Mismo metodo que la encriptacion comparamos la cadena si cuenta con la informacion tenemos true sino hay un falce
-                        resultadod=document.querySelector(".inputtext").value.replace(/imes/ig, "i"); // En caso de que sea true se remplaza con el codigo remplace
-                        document.querySelector(".inputtext").value=resultadod;//Se asigna valor despues de la desencriptacion para seguir con las siguientes condiciones
-                    }
-                if ((document.querySelector(".inputtext").value.includes('enter'))==true){//Mismas sentencias pero para letra e
-                        resultadod=document.querySelector(".inputtext").value.replace(/enter/ig, "e");
-                        document.querySelector(".inputtext").value=resultadod;
-                    }    
-                if ((document.querySelector(".inputtext").value.includes('ai'))==true){//Mismas sentencias pero para letra a
-                        resultadod=document.querySelector(".inputtext").value.replace(/ai/ig, "a");
-                        document.querySelector(".inputtext").value=resultadod;
-                    }
-                if ((document.querySelector(".inputtext").value.includes('ober'))==true){//Mismas sentencias pero para letra o
-                        resultadod=document.querySelector(".inputtext").value.replace(/ober/ig, "o");    
-                        document.querySelector(".inputtext").value=resultadod;
-                    } 
-                if ((document.querySelector(".inputtext").value.includes('ufat'))==true){//Mismas sentencias pero para letra u
-                        resultadod=document.querySelector(".inputtext").value.replace(/ufat/ig, "u");    
-                        document.querySelector(".inputtext").value=resultadod;
-                    }
+        if (document.querySelector(".inputtext").value.includes("enter") == true) {
+            //Mismas sentencias pero para letra e
+            resultadod = document
+                .querySelector(".inputtext")
+                .value.replace(/enter/gi, "e");
+            document.querySelector(".inputtext").value = resultadod;
+        }
+        if (document.querySelector(".inputtext").value.includes("ai") == true) {
+            //Mismas sentencias pero para letra a
+            resultadod = document
+                .querySelector(".inputtext")
+                .value.replace(/ai/gi, "a");
+            document.querySelector(".inputtext").value = resultadod;
+        }
+        if (document.querySelector(".inputtext").value.includes("ober") == true) {
+            //Mismas sentencias pero para letra o
+            resultadod = document
+                .querySelector(".inputtext")
+                .value.replace(/ober/gi, "o");
+            document.querySelector(".inputtext").value = resultadod;
+        }
+        if (document.querySelector(".inputtext").value.includes("ufat") == true) {
+            //Mismas sentencias pero para letra u
+            resultadod = document
+                .querySelector(".inputtext")
+                .value.replace(/ufat/gi, "u");
+            document.querySelector(".inputtext").value = resultadod;
+        }
 
-            resultadod=document.querySelector(".inputtext").value//Guardamos la cadena despues de desencriptar en variable resultadod
+        resultadod = document.querySelector(".inputtext").value; //Guardamos la cadena despues de desencriptar en variable resultadod
 
-                    if  (x==resultadod){// Se pcupa esta condicion para validar si despues de desencriptar hubo algun cambios
-                    document.querySelector(".inputtext2").value="El mensaje no esta encriptado";//Como son igual significa que no hay texto oh la palabra no esta encriptada
-                    document.querySelector(".inputtext2").disabled=true;//Se debasilita el textarea de resultado
-                    } else {//Sin encambio si hay alguna diferencia se procede cone ste else
-                        document.querySelector(".inputtext").value=""; //Se procede a vaciar el text area del texto ingresado
-                        mensajecuadro.focus();//Se coloca el cursos en el texta para ingresar nuevo texto
-                        document.querySelector(".inputtext2").value=resultadod;//Se coloca el valor de lo desencirptado en el div de resultado
-                        document.querySelector(".inputtext2").disabled=true;//Se desabilita la edicionde textarea para no modificar el mensaje
-                    }
-            } 
+        if (x == resultadod) {
+            // Se pcupa esta condicion para validar si despues de desencriptar hubo algun cambios
+            document.querySelector(".inputtext2").value =
+                "El mensaje no esta encriptado"; //Como son igual significa que no hay texto oh la palabra no esta encriptada
+                document.querySelector('.Copy').style.display = 'none'; //Se utiliza para ocultar el boton de copiar
+                document.querySelector(".inputtext2").disabled = true; //Se debasilita el textarea de resultado
+        } else {
+            //Sin encambio si hay alguna diferencia se procede cone ste else
+            document.querySelector(".inputtext").value = ""; //Se procede a vaciar el text area del texto ingresado
+            mensajecuadro.focus(); //Se coloca el cursos en el texta para ingresar nuevo texto
+            document.querySelector(".inputtext2").value = resultadod; //Se coloca el valor de lo desencirptado en el div de resultado
+            document.querySelector(".inputtext2").disabled = true; //Se desabilita la edicionde textarea para no modificar el mensaje
+        }
+    }
 </script>
