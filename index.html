@@ -167,17 +167,18 @@ document.querySelector(".prueba").value="";
     if ((document.querySelector(".prueba").value)==(document.querySelector(".prueba").value)){
         var x=document.querySelector(".prueba").value
         console.log("Valor guardado",x)
-    if ((document.querySelector(".prueba").value.includes('enter'))==true){
+
+        if ((document.querySelector(".prueba").value.includes('imes'))==true){
+         resultadod=document.querySelector(".prueba").value.replace(/imes/ig, "i");    
+        document.querySelector(".prueba").value=resultadod;
+        console.log(resultadod)}
+
+         if ((document.querySelector(".prueba").value.includes('enter'))==true){
          resultadod=document.querySelector(".prueba").value.replace(/enter/ig, "e");    
         document.querySelector(".prueba").value=resultadod;
         console.log(resultadod)
-    } 
-    
-    if ((document.querySelector(".prueba").value.includes('imes'))==true){
-         resultadod=document.querySelector(".prueba").value.replace(/imes/ig, "i");    
-        document.querySelector(".prueba").value=resultadod;
-        console.log(resultadod)
-    } 
+    }    
+     
 
     if ((document.querySelector(".prueba").value.includes('ai'))==true){
          resultadod=document.querySelector(".prueba").value.replace(/ai/ig, "a");    
