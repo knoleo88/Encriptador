@@ -1,7 +1,7 @@
 //Declaracion de constantes donde seleccionaremos los elementos de html que interactuaran con Javascript
 const textArea = document.querySelector(".text-area");//Aqui asignamos el primer elemento de la calse texarea de html a la vaiablre declarada
-const message = document.querySelector(".menssage");//Aqui asignamos el primer elemento de la calse message de html a la vaiablre declarada
-const copy = document.querySelector(".copy");
+const message = document.querySelector(".textarea2");//Aqui asignamos el primer elemento de la calse message de html a la vaiablre declarada
+const copy = document.querySelector(".Copy");
 copy.style.display = "none"// Ocultamos el elemento copy que hace referencia al botond e copyr en la interfaz grafica
 
 
@@ -10,9 +10,6 @@ function validateText(){ //Funcion que se encargara de validar el texto cumpla c
     let validator = textwrten.match(/^[a-z]*$/); // Se crea variable para indicar el texto valido para el encriptador
     //Es muy importante esta parte ya que se esta usando expresiones regualres donde ^[a-z]*$ indica que solo aceptaran valores de la a-z minusculas
     //y el ultimo * es para inidcar que es toda la linea y que los espacios antes y despues del ultimo valor sean contados tambien 
-
-    console.log(validator);
-    console.log(!validator);
 
     if(!validator || validator === 0) {// Operacion logica or para derteminar el uso de los caracteres especiales
         alert("Solo son permitidas letras minúsculas y sin acentos")
