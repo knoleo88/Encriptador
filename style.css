@@ -290,7 +290,7 @@ footer {
     /*position: absolute;*/
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1360px) {
     body {
         width: auto;
     }
@@ -302,6 +302,9 @@ footer {
         width: 99%;
         margin: 0 auto;
     
+    }
+    .menssagetextarea{
+        width: 98%;
     }
     .text-area{
         resize: none;
@@ -373,7 +376,7 @@ footer {
         margin-top: 2px;
         border: none;
         resize: none;
-        width: 97%;
+        width: 98%;
         height: 300px;
         border-radius: 24px;
         background: #FFFFFF;
