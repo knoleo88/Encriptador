@@ -19,10 +19,33 @@
     </header>
 
     <main>
+        <div class="Center">
         <form>
-            <!-- Caja de texto a ingresar -->
-            <textarea id="textinput" class="text-area" name="valortextarea" rows="10" cols="50" placeholder="Ingrese el texto aqui"></textarea>
-            <!--texarea de texto-->
+            <div class="menssagetextarea">
+                <!-- Caja de texto a ingresar -->
+                <textarea id="textinput" class="text-area" name="valortextarea" rows="10" cols="50" placeholder="Ingrese el texto aqui"></textarea>
+                <!--texarea de texto-->
+            </div>
+
+            <div class="menssage">
+                <div class="result">
+                    <!-- Div para el resultado de la encriptacion o desencriptacion-->
+                    <textarea id="textinput2" class="textarea2" name="valortextarea2"></textarea>
+                    <!--Tex area de resultado -->
+                </div>
+                <!--Div del recuadro de imagen e instruicciones para encriptador-->
+                <div class="menssageimg">
+                    <img src="Desk1/Muñeco.png" alt="PersonaSentada" class="Persona_Sentada" />
+                    <ul>
+                        <h1 class="mensajenegritas">Ningún mensaje fue encontrado</h1>
+                        <h1 class="ingresatexto">
+                            Ingresa el texto que desees encriptar o desencriptar.
+                        </h1>
+                    </ul>   
+                </div>
+
+            </div>
+
         </form>
 
         <div class="information">
@@ -39,23 +62,14 @@
             <button class="DesEncrypt" onclick="btnDesEncrypt()">Desencriptar</button> <!-- Boton de descriptar que desde el mismo boton al hacer clik manda a llamar la funcion correpondiente-->
         </section>
 
-        <aside class="menssage">
-            <!--Div del recuadro de imagen e instruicciones para encriptador-->
-            <img src="Desk1/Muñeco.png" alt="PersonaSentada" class="Persona_Sentada" />
-            <ul>
-                <h1 class="bclaktext">Ningún mensaje fue encontrado</h1>
-                <h2 class="textin">Ingresa el texto que desees encriptar o desencriptar.</h1>
-            </ul>
-        </aside>
 
-        <div class="result">
-            <!-- Div para el resultado de la encriptacion o desencriptacion-->
-            <textarea id="textinput2" class="textarea2" name="valortextarea2" rows="10" cols="50"></textarea>
-            <!--Tex area de resultado -->
-        </div>
+
+
         <div><button class="Copy" onclick="clipboard()">Copiar</button><!--Boton de copiar con el cual se llama a la funcion de copiar desde el mismo boton--></div>
         
         <!-- Botton de copiar-->
+
+    </div>
     </main>
     <footer>
         <div class="copyright">

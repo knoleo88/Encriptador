@@ -20,9 +20,509 @@
      background-color: darkblue;
  }
 body {
-    position: relative;
     /*width: 1440px;
       height: 1024px;*/
     background: #f3f5fc;
 }
+.Center{
+    width: 99%;
+    margin: 0 auto;
 
+}
+header h1 {
+    text-align: center; 
+    font-family: Arial Black; 
+    font-weight: bold; 
+    font-size: 30px; 
+    color: #3d4f92; 
+    text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+    }
+    .menssagetextarea{
+    display: inline;
+    margin: 10px 10px 10px 10px;  
+    float: left;
+  }
+.text-area{
+    resize: none;
+    
+    width: 762px;
+    height: 540px;
+    box-shadow: 0px 0px 12px 8px #4a7d8c;
+    border-radius: 24px;
+    background: #f3f5fc;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0a3871;
+}
+
+.menssage{
+    margin: 10px 10px 10px 10px;
+    display: inline-block;
+    text-align: center;
+    
+    /*display: inline-block;*/
+    width: 540px;
+    height: 548px;
+    box-shadow: 0px 0px 12px 8px #4a7d8c;
+    border-radius: 24px;
+    background: #FFFFFF;
+}
+.information{
+    margin-top: 10px;
+    display: block;
+    margin-left: 20px;
+}
+p {
+    display: inline;
+}
+
+
+.admiration {
+    width: 16px;
+    height: 16px;
+}
+
+.encribotdecri {
+    display: inline-block;
+    margin: 10px 0px 0px 70px;
+    /* padding: 0px; */
+    gap: 24px;
+    /* position: absolute; */
+    width: 680px;
+    height: 67px;
+}
+
+.Encrypt {
+    /* Auto layout */
+    padding: 24px;
+    gap: 8px;
+
+    width: 328px;
+    height: 67px;
+
+    /* Dark blue/dark-blue-300 */
+
+    background: #0a3871;
+    border-radius: 24px;
+
+    /**/
+
+    text-align: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+
+    /* White */
+
+    color: #ffffff;
+}
+
+.Encrypt:active {
+    background: #d8dfe8;
+    /* Dark blue/dark-blue-300 */
+
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+    /* Dark blue/dark-blue-300 */
+
+    color: #0a3871;
+    transform: scale(1.01);
+}
+
+.DesEncrypt {
+    padding: 24px;
+    gap: 8px;
+
+    width: 328px;
+    height: 67px;
+
+    /* Light gray */
+
+    background: #d8dfe8;
+    /* Dark blue/dark-blue-300 */
+
+    border: 1px solid #0a3871;
+    border-radius: 24px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* Dark blue/dark-blue-300 */
+
+    color: #0a3871;
+}
+
+.DesEncrypt:active {
+    background: #0a3871;
+    /* White */
+
+    color: #ffffff;
+    transform: scale(1.01);
+}
+
+.textarea2 {
+    margin-top: 2px;
+    border: none;
+    resize: none;
+    width: 97%;
+    height: 537px;
+    border-radius: 24px;
+    background: #FFFFFF;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 150%;
+    color: #0a3871;
+    
+}
+.Persona_Sentada {
+    width: 400px;
+    height: 375px;
+    margin: 10px;
+    /* text-align: center; */
+    /* align-items: center; */
+    
+}
+
+.menssage ul {
+    /* Frame 5 recuado para textos*/
+    /* Auto layout */
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 16px;
+
+    /*position: absolute;*/
+    width: 336px;
+    height: 122px;
+    left: 32px;
+    top: 619px;
+}
+
+.mensajenegritas {
+    /* Ningún mensaje fue encontrado */
+
+    width: 336px;
+    height: 58px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 120%;
+    /* or 29px */
+
+    text-align: center;
+
+    /* Gray/gray-500 */
+
+    color: #343a40;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
+}
+
+.ingresatexto {
+    /* Ingresa el texto que desees encriptar o desencriptar. */
+
+    width: 336px;
+    height: 48px;
+
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    text-align: center;
+
+    /* Gray/gray-400 */
+
+    color: #495057;
+
+    /* Inside auto layout */
+
+    flex: none;
+    order: 1;
+    align-self: stretch;
+    flex-grow: 0;
+}
+.Copy {
+    /* Button */
+    position: absolute;
+    width: 336px;
+    height: 67px;
+    top: 678px;
+    left: 917px;
+    /* Dark blue/dark-blue-300 */
+
+    border: 1px solid #0a3871;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    border-radius: 24px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+
+    /* Dark blue/dark-blue-300 */
+
+    color: #0a3871;
+}
+
+.Copy:active {
+    background: #0a3871;
+    /* White */
+
+    color: #ffffff;
+    transform: scale(1.01);
+}
+footer {
+    margin-top: 10px;
+    text-align: center;
+    /*position: absolute;*/
+}
+
+@media screen and (max-width: 800px) {
+    body {
+        width: auto;
+    }
+
+    .header {
+        display: block;
+    }
+    .Center{
+        width: 99%;
+        margin: 0 auto;
+    
+    }
+    .text-area{
+        resize: none;
+        
+        width: 100%;
+        height: 540px;
+        box-shadow: 0px 0px 12px 8px #4a7d8c;
+        border-radius: 24px;
+        background: #f3f5fc;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        color: #0a3871;
+    }
+    .Persona_Sentada{
+        display: none;
+    }
+    .menssage{
+        margin: 120px 10px 10px 10px;
+        display: inline-block;
+        text-align: center;
+        
+        /*display: inline-block;*/
+        width: 98%;
+        height: auto;
+        box-shadow: 0px 0px 12px 8px #4a7d8c;
+        border-radius: 24px;
+        background: #FFFFFF;
+    }
+    .information{
+        position: absolute;
+        top: 640px;
+        margin-top: 10px;
+        display: block;
+        margin-left: 20px;
+    }
+    p {
+        display: inline;
+    }
+    
+    
+    .admiration {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .encribotdecri {
+        text-align: center;
+        width: 98%;
+        margin: 0px;
+        position: absolute;
+        top: 669px;
+        display: inline-block;
+        gap: 24px;
+        /* position: absolute; */
+        /* width: 680px; */
+        /* height: 67px;*/
+    }
+    
+    .Encrypt {
+        width: 48%;
+    }
+
+    
+    .DesEncrypt {
+        width: 48%;
+    }
+    .textarea2 {
+        margin-top: 2px;
+        border: none;
+        resize: none;
+        width: 97%;
+        height: 300px;
+        border-radius: 24px;
+        background: #FFFFFF;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        color: #0a3871;
+        
+    }
+    .Copy {
+    position: static;
+    width: 98%;
+    margin: 0 auto;
+    }
+    
+    footer {
+        margin-top: 10px;
+        text-align: center;
+        /*position: absolute;*/
+    }
+}    
+@media screen and (max-width: 390px) {
+    .header {
+        display: block;
+    }
+    body {
+        width: auto;
+    }
+
+    .header {
+        display: block;
+    }
+    .Center{
+        width: 99%;
+        margin: 0 auto;
+    
+    }
+    .text-area{
+        resize: none;
+        
+        width: 100%;
+        height: 500px;
+        box-shadow: 0px 0px 12px 8px #4a7d8c;
+        border-radius: 24px;
+        background: #f3f5fc;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        color: #0a3871;
+    }
+    .Persona_Sentada{
+        display: none;
+    }
+    .menssage{
+        margin: 175px 10px 10px 10px;
+        display: inline-block;
+        text-align: center;
+        
+        /*display: inline-block;*/
+        width: 98%;
+        height: auto;
+        box-shadow: 0px 0px 12px 8px #4a7d8c;
+        border-radius: 24px;
+        background: #FFFFFF;
+    }
+    .information{
+        position: absolute;
+        top: 600px;
+        margin-top: 10px;
+        display: block;
+        margin-left: 20px;
+    }
+    p {
+        display: inline;
+        
+    }
+    .menssage ul {
+        /* Frame 5 recuado para textos*/
+        /* Auto layout */
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0px;
+        gap: 16px;
+    
+        /*position: absolute;*/
+        width: 90%;
+        height: 122px;
+        left: 32px;
+        top: 619px;
+    }
+    .mensajenegritas,.ingresatexto{
+        width: auto;
+    }    
+    .admiration {
+        width: 16px;
+        height: 16px;
+    }
+    
+    .encribotdecri {
+        text-align: center;
+        width: 98%;
+        margin: 0px;
+        position: absolute;
+        top: 630px;
+        display: block;
+        gap: 24px;
+        /* position: absolute; */
+        /* width: 680px; */
+        /* height: 67px;*/
+    }
+    
+    .Encrypt {
+        margin: 0px auto;
+        width: 90%; 
+       }
+
+    
+    .DesEncrypt {
+        margin-top: 10px;
+        
+        width: 90%;  
+      }
+    .textarea2 {
+        margin-top: 2px;
+        border: none;
+        resize: none;
+        width: 97%;
+        height: 300px;
+        border-radius: 24px;
+        background: #FFFFFF;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 150%;
+        color: #0a3871;
+        
+    }
+    .Copy {
+    position: static;
+    width: 98%;
+    margin: 0 auto;
+    }
+    
+    footer {
+        margin-top: 10px;
+        text-align: center;
+        /*position: absolute;*/
+    }
+}
